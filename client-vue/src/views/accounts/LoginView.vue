@@ -14,16 +14,16 @@
                               <p class="text-muted mb-3">LOGIN</p>
                               <form class="accounts-form">
                                 <div class="form-group mb-3">
-                                    <input id="username" type="text" v-model="loginData.username" placeholder="ID" class="form-control border-0 shadow-sm px-4 text-primary" required="">
+                                    <input id="username" type="text" v-model="loginData.username" @keyup.enter="moveFocusToPw" placeholder="ID" class="form-control border-0 shadow-sm px-4 text-primary" required="">
                                     <span v-if="validationError.username" class="validation ms-1">
                                       아이디를 입력해주세요.
                                     </span>
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input id="password" type="password" v-model="loginData.password" placeholder="password" class="form-control border-0 shadow-sm px-4 text-primary" required="">
+                                    <input id="password" type="password" v-model="loginData.password" @keyup.enter="onClick($event)" placeholder="password" class="form-control border-0 shadow-sm px-4 text-primary" required="">
                                     <span v-if="validationError.password" class="validation ms-1">
                                         비밀번호를 입력해주세요.
-                                      </span>
+                                    </span>
                                 </div>
                                 <div v-if="validationError.non_field_errors" class="validation ms-1">
                                   입력하신 정보와 일치하는 아이디 혹은 비밀번호가 존재하지 않습니다.
@@ -39,6 +39,7 @@
               </div>
           </div><!-- End -->
         </div>
+    <br>
   </div>
 </template>
 
@@ -60,6 +61,12 @@ export default {
     onClick(event) {
       event.preventDefault()
       this.login(this.loginData)
+    },
+
+    // 엔터 입력시 포커스 이동
+    moveFocusToPw() {
+      document.getElementById('username').blur()
+      document.getElementById('password').focus()
     }
   },
   computed: {

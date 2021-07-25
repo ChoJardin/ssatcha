@@ -28,7 +28,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost:8080', '127.0.0.1:8080',
 #                  'localhost', '127.0.0.1']
-ALLOWED_HOSTS = [".ap-northeast-2.compute.amazonaws.com",
+ALLOWED_HOSTS = [".us-east-2.compute.amazonaws.com",
                  "3.15.7.90"]
 
 

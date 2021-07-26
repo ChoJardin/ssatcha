@@ -170,7 +170,7 @@ ACCOUNT_ADAPTER = 'accounts.adapter.CustomAccountAdapter'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # CORS ALLOW
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = ['ssatcha.s3-website.us-east-2.amazonaws.com/']
 
 # DRF setting
 REST_FRAMEWORK = {

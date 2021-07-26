@@ -16,7 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -29,9 +28,9 @@ DEBUG = True
 # ALLOWED_HOSTS = ['localhost:8080', '127.0.0.1:8080',
 #                  'localhost', '127.0.0.1']
 ALLOWED_HOSTS = [".us-east-2.compute.amazonaws.com",
+                 'ec2-3-17-178-184.us-east-2.compute.amazonaws.com'
                  'ec2-3-15-7-90.us-east-2.compute.amazonaws.com'
-                 "3.15.7.90"]
-
+                 '3.17.178.184']
 
 # Application definition
 
@@ -40,7 +39,7 @@ INSTALLED_APPS = [
     'accounts',
     'board',
     'movies',
-    
+
     # 3rd party apps
     'django_extensions',
     'corsheaders',
@@ -63,7 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.humanize',  #  시간 설정 위해 추가
+    'django.contrib.humanize',  # 시간 설정 위해 추가
 ]
 
 MIDDLEWARE = [
@@ -97,7 +96,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'SSATCHA.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -107,7 +105,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -127,7 +124,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -141,12 +137,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -172,7 +167,6 @@ ACCOUNT_ADAPTER = 'accounts.adapter.CustomAccountAdapter'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-
 # CORS ALLOW
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -183,10 +177,9 @@ REST_FRAMEWORK = {
     ]
 }
 
-
 # django.contrib.sites 에서 사용
 SITE_ID = 1
 
 # profile image
-MEDIA_URL = '/media/'   # URL 패턴
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')    # IMAGE 저장 위치
+MEDIA_URL = '/media/'  # URL 패턴
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # IMAGE 저장 위치

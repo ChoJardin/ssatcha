@@ -27,15 +27,12 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost:8080', '127.0.0.1:8080',
 #                  'localhost', '127.0.0.1']
-ALLOWED_HOSTS = [".us-east-2.compute.amazonaws.com",
-<<<<<<< HEAD
-                 'ec2-3-17-178-184.us-east-2.compute.amazonaws.com'
-                 'ec2-3-15-7-90.us-east-2.compute.amazonaws.com'
-                 '3.17.178.184']
-=======
-                 'ec2-3-15-7-90.us-east-2.compute.amazonaws.com',
-                 "3.15.7.90"]
->>>>>>> 258b6746cfbc0dcd9884a119e387f44fb8b89b03
+
+ALLOWED_HOSTS = [
+    'ec2-18-209-238-84.compute-1.amazonaws.com/',
+    '18.209.238.84',
+    'ssatcha.site'
+]
 
 # Application definition
 
@@ -144,15 +141,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-<<<<<<< HEAD
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-=======
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-STATIC_URL = '/static/'
->>>>>>> 258b6746cfbc0dcd9884a119e387f44fb8b89b03
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

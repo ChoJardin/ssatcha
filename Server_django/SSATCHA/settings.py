@@ -29,8 +29,9 @@ DEBUG = True
 # ALLOWED_HOSTS = ['localhost:8080', '127.0.0.1:8080',
 #                  'localhost', '127.0.0.1']
 ALLOWED_HOSTS = [".us-east-2.compute.amazonaws.com",
+                 'ec2-3-17-178-184.us-east-2.compute.amazonaws.com'
                  'ec2-3-15-7-90.us-east-2.compute.amazonaws.com'
-                 "3.15.7.90"]
+                 '3.17.178.184']
 
 
 # Application definition
@@ -144,6 +145,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
